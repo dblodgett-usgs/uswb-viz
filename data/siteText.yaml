@@ -19,10 +19,9 @@ explanationText1: |
   In this data visualization, you can see how three major components of the
   water budget vary across the conterminous US. Precipitation is incoming rain
   and snow; evapotranspiration is outgoing evaporation from soil and
-  waterbodies and transpiration through plants; and runoff is excess water that
-  makes its way to a stream or river through spring discharges, streams, and
-  lakes. Each of these components is estimated with a variety of measurement
-  and modeling methods.
+  water bodies and transpiration through plants; and runoff is excess water that
+  makes its way to lakes and rivers through streams and spring discharges. Each 
+  of these components is estimated with a variety of measurement and modeling methods.
 
   With perfect information, the water budget bar charts shown here would
   “balance”, showing that in the long run, inflows to each watershed are equal
@@ -54,7 +53,7 @@ explanationText1: |
   the water budget. The final source of the “unknown” in the water budget stems
   from the fact that current hydrologic data products may not have captured all
   of the components of the water budget, resulting in unquantified components
-  of the water budget. These could natural processes that we know we have not
+  of the water budget. These could be natural processes that we know we have not
   accounted for (such as groundwater flow out of a watershed) or human water
   use. The NWC continues to apply cutting-edge science to expanding our ability
   to account for the complete water budget.
