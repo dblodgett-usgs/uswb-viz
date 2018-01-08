@@ -279,6 +279,7 @@ publish:
     template: fullpage
     depends:
       header: publish_header
+      footer: publish_footer
       map-section: publish_map_section
       handmade-social-section: handmade-social-section
       lib-d3-js: lib-d3-js
@@ -386,3 +387,13 @@ publish:
     mimetype: image/png
     title: "Default Thumbnail"
     alttext: "Default Thumbnail"
+  -
+    id: publish_footer
+    publisher: footer
+    template: footer-template
+    depends: lib-footer-css
+    blogsInFooter: FALSE
+    vizzies:
+      - name: Visualizing water use by region and time
+        org: USGS-VIZLAB
+        repo: water-use
