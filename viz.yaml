@@ -291,12 +291,13 @@ publish:
       svg-css: publish_svg_css
       viz-css: publish_viz_css
       header-css: lib-header-css
+      footer-css: lib-footer-css
       socialCSS: publish_social_css
     context:
       header: header
       sections: ["handmade-social-section", "map-section"]
       resources: [ "lib-d3-js", "jquery-js", "vizlab-js", "svg-injector-js", 
-      "animate-js", "tooltip-js", "header-css", "viz-css", "svg-css", "socialCSS"]
+      "animate-js", "tooltip-js", "header-css", "viz-css", "svg-css", "footer-css", "socialCSS"]
   -
     id: publish_map_section
     publisher: section
