@@ -1,23 +1,36 @@
-vizlab: "0.2.2"
+vizlab: "0.2.2.9005"
 info:
   id: uswb-viz
   name: US Water Budgets
-  date: 2017-10-10
-  publish-date: 9999-01-01
-  path: /us-water-budgets
-  analytics-id: UA-78530187-1
+  date: 2018-01-20
+  publish-date: 2018-01-20
+  path: /uswb-viz
+  analytics-id: TBD
   description: >-
-    U.S. Water Budgets... DRAFT/Preliminary 
+    !!! PRELIMINARY AND SUBJECT TO REVISISON !!!
+    U.S. Water Budgets -- In this data visualization,
+    you can see how three major components of the water
+    budget vary across the conterminous US.
   audience: General public
   keywords: [ "water", "USGS", "VIZLAB", "water budget" ]
-  url: https://owi.usgs.gov/vizlab/us-water-budgets/
-  thumbnail:  
-    url:  "none"  
-    width: 250    
-    height: 250    
-    alttext: "some text here"
+  url: https://dblodgett-usgs.github.io/uswb-viz/
+  thumbnail-facebook:
+    url: "https://dblodgett-usgs.github.io/uswb-viz/images/thumb-facebook.png"
+    width: 400
+    height: 400
+    alttext: "How the water cycle varies across the United States"
+    type: image/png
+  thumbnail-twitter:
+    url: "https://dblodgett-usgs.github.io/uswb-viz/images/thumb-twitter.png"
+    width: 400
+    height: 400
+    alttext: "How the water cycle varies across the United States"
+    type: image/png
   thumbnail-landing: 
-    url: "none"
+    url: "https://dblodgett-usgs.github.io/uswb-viz/images/thumb-landing.png"
+    width: 400
+    height: 400
+    alttext: "How the water cycle varies across the United States"
   contributors:
     -
       name: David Blodgett
