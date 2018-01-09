@@ -76,29 +76,28 @@
       </script>
       
   <title>US Water Budgets</title>
-    <script src="js/d3-4.11.0.min.js?_c=8723001" type="text/javascript"></script>
-    <script src="js/jquery-3.2.1.min.js?_c=7146669" type="text/javascript"></script>
-    <script src="js/vizlab.js?_c=5181839" type="text/javascript"></script>
-    <script src="js/svg-injector-1.1.3.min.js?_c=9450833" type="text/javascript"></script>
-    <script src="js/animate.js?_c=8494760" type="text/javascript"></script>
-    <script src="js/tooltip.js?_c=9491345" type="text/javascript"></script>
-    <link href="css/header.css?_c=5897219" rel="stylesheet" type="text/css" />
-    <link href="css/footer.css?_c=3746185" rel="stylesheet" type="text/css" />
-    <link href="css/viz.css?_c=4255904" rel="stylesheet" type="text/css" />
-    <link href="css/svg.css?_c=6927583" rel="stylesheet" type="text/css" />
-    <link href="css/socialMedia.css?_c=6618789" rel="stylesheet" type="text/css" />
+    <script src="js/d3-4.11.0.min.js?_c=3243163" type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.min.js?_c=8777839" type="text/javascript"></script>
+    <script src="js/vizlab.js?_c=8439136" type="text/javascript"></script>
+    <script src="js/svg-injector-1.1.3.min.js?_c=2088660" type="text/javascript"></script>
+    <script src="js/animate.js?_c=2143078" type="text/javascript"></script>
+    <script src="js/tooltip.js?_c=3403180" type="text/javascript"></script>
+    <link href="css/header.css?_c=5820026" rel="stylesheet" type="text/css" />
+    <link href="css/viz.css?_c=7662295" rel="stylesheet" type="text/css" />
+    <link href="css/svg.css?_c=3169435" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css?_c=693961" rel="stylesheet" type="text/css" />
+    <link href="css/socialMedia.css?_c=1803315" rel="stylesheet" type="text/css" />
   <noscript>Javascript is not enabled</noscript>
     
     <script type="application/javascript" src="https://www2.usgs.gov/scripts/analytics/usgs-analytics.js"></script>
+   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78530187-1"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-78530187-1', 'auto');
-      ga('send', 'pageview');
-
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-78530187-1');
     </script>
     
 </head>
@@ -106,7 +105,10 @@
 
   <div id="header">
   <div id="logo">
-  	<img src="images/usgsLogo.png?_c=4096190" alt="USGS" title="USGS" />
+    <a href="https://www.usgs.gov/" target="_blank" onclick="gtag('event','outbound', 'clicked on USGS.gov')">
+    	  <img src="images/usgsLogo.png?_c=4262734" alt="U.S. Geological Survey" title="U.S. Geological Survey" />
+    </a> 
+  	
   	<h3>Water Budgets Across the U.S.</h3>
   </div>
 </div>
@@ -182,10 +184,9 @@ into and out of a watershed.</p>
 <p>In this data visualization, you can see how three major components of the
 water budget vary across the conterminous US. Precipitation is incoming rain
 and snow; evapotranspiration is outgoing evaporation from soil and
-waterbodies and transpiration through plants; and runoff is excess water that
-makes its way to a stream or river through spring discharges, streams, and
-lakes. Each of these components is estimated with a variety of measurement
-and modeling methods.</p>
+water bodies and transpiration through plants; and runoff is excess water that
+makes its way to lakes and rivers through streams and spring discharges. Each 
+of these components is estimated with a variety of measurement and modeling methods.</p>
 
 <p>With perfect information, the water budget bar charts shown here would
 “balance”, showing that in the long run, inflows to each watershed are equal
@@ -217,7 +218,7 @@ and to incorporate information on uncertainty into our characterization of
 the water budget. The final source of the “unknown” in the water budget stems
 from the fact that current hydrologic data products may not have captured all
 of the components of the water budget, resulting in unquantified components
-of the water budget. These could natural processes that we know we have not
+of the water budget. These could be natural processes that we know we have not
 accounted for (such as groundwater flow out of a watershed) or human water
 use. The NWC continues to apply cutting-edge science to expanding our ability
 to account for the complete water budget.</p>
@@ -236,7 +237,55 @@ and may change under various land use and water management scenarios.</p>
 </div>
 
   <footer>
-    footer
+    
+<div class="footerContentAligner">
+
+    <div id="vizlabPromo">
+      <p>This interactive data visualization was created by
+      <a href="https://owi.usgs.gov/vizlab/" target="_blank">
+        <strong>USGS VIZLAB</strong></p>
+      	<img src="images/atom.svg" alt="atom icon"/>
+    	</a>
+    </div>
+
+    <div id="github-contact">
+      <a class="githublink" href="" target="_blank" onclick="gtag('event','outbound', 'clicked on repo')">
+        <img src="images/github.svg" alt="github icon"/>
+      	<p>Get the Code</p>
+      </a>
+      <span>|</span>
+      <a href="mailto:vizlab@usgs.gov">
+    	  Contact Us
+    	</a>
+    	<span>|</span>
+      <a href="https://www.usgs.gov/" target="_blank" onclick="gtag('event','outbound', 'clicked on USGS.gov')">
+    	  U.S. Geological Survey
+    	</a> 
+    </div>
+
+    <div id="relatedItems">
+
+      <div id="relatedVizzies">
+        <h3>Related Visualizations:</h3>
+        <div class="relatedItemContainer">
+        		<div class="relatedItem">
+        		  <a href="https://owi.usgs.gov/vizlab/water-use/" target="_blank" onclick="gtag('event','outbound', 'clicked on related vizzy')">
+        		    <div class="footerThumbnail">
+        					<img src="https://owi.usgs.gov/vizlab/water-use/images/thumb_12_12_noSlider.png" alt=""/>
+        				</div>
+        			  <div class="titleHandler">
+        				  <h4>Visualizing water use by region and time</h4>
+        				</div>
+        			</a>
+        		</div>
+      	</div>
+      </div>
+
+    </div>
+
+</div>
+
+
   </footer>
 </body>
 
