@@ -271,8 +271,8 @@ visualize:
     "process_flowline_map_data",
     "process_boundary_map_data",
     "process_outlet_map_data"]
-    fig-height: 400
-    fig-width: 400
+    fig-height: 420
+    fig-width: 800
   -
     id: visualize_thumbnail_map_landing
     location: images/thumb-landing.png
@@ -378,29 +378,26 @@ publish:
     mimetype: text/javascript
     publisher: resource
   -
-    id: publish_facebook_thumb
-    location: images/thumb-facebook.png
-    mimetype: image/png
-    title: "Facebook Thumbnail"
-    alttext: "Facebook Thumbnail"
-  -
     id: thumb-twitter
     location: images/thumb-twitter.png
     mimetype: image/png
+    inline: true
     title: "Twitter Thumbnail"
     alttext: "Twitter Thumbnail"
   -
     id: thumb-landing
     location: images/thumb-landing.png
     mimetype: image/png
+    inline: true
     title: "Landing Page Thumbnail"
     alttext: "Landing Page Thumbnail"
   -
-    id: thumb-main
-    location: images/thumb-landing.png
+    id: thumb-facebook
+    location: images/thumb-facebook.png
     mimetype: image/png
-    title: "Default Thumbnail"
-    alttext: "Default Thumbnail"
+    inline: true
+    title: "Facebook Thumbnail"
+    alttext: "Facebook Thumbnail"
   -
     id: publish_footer
     publisher: footer

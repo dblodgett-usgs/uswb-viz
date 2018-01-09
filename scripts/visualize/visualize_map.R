@@ -1,30 +1,59 @@
 visualize.visualize_map_thumbnail <- function(viz) {
   library(dplyr)
-  
   library(sf)
+  
   data <- readDepends(viz)
   required <- c("process_flowline_map_data",
                 "process_boundary_map_data",
                 "process_outlet_map_data")
   checkRequired(data, required)
+  
   hu <- "140100051906"
+  
   flines <- data[["process_flowline_map_data"]]
   flines <- flines[which(flines$id == hu),]$geometry
+  
   boundary <- data[["process_boundary_map_data"]]
   boundary <- boundary[which(boundary$id == hu),]$geometry
+  
   outlet <- data[["process_outlet_map_data"]]
   outlet <- outlet[which(outlet$id == hu),]$geometry
 
   height <- viz[["fig-height"]]
   width <- viz[["fig-width"]]
+  
   png(filename = viz[['location']], width = width, height = height, units = 'px')
-  par(mar=c(0,0,0,0), oma=c(0,0,0,0), bg='white')
-  plot(boundary, col = "grey")
+  
+  par(mar=c(0, 0, 0, 0), oma=c(0, 0, 0, 0), bg='white')
+  
+  if(height == width) {
+    xlim <- c(-800000, -467000)
+    ylim <- c(-800000, -455000)
+    x1 <- -760000
+    y1 <- -475000
+    x2 <- x1
+    y2 <- -505000
+    x3 <- x1
+    y3 <- -535000
+    text_size <- 3
+  } else {
+    xlim <- c(-1020000, -467000)
+    ylim <- c(-790000, -465000)
+    x1 <- -1015000
+    y1 <- -530000
+    x2 <- x1
+    y2 <- -600000
+    x3 <- x1
+    y3 <- -670000
+    text_size <- 4.5
+  }
+  plot(x = NULL, y = NULL, xlim = xlim, ylim = ylim)
+  plot(boundary, col = "grey", add = T)
   plot(flines, col = "blue", add = T)
   plot(outlet, pch = 20, cex = 3, col = "red", add = T)
-  text(-760000, -475000, "Precipitation", cex = 3, pos = 4)
-  text(-760000, -505000, "Evaporation", cex = 3, pos = 4)
-  text(-760000, -535000, "Runoff", cex = 3, pos = 4)
+  text(x1, y1, "Precipitation", cex = text_size, pos = 4)
+  text(x2, y2, "Evaporation", cex = text_size, pos = 4)
+  text(x3, y3, "Runoff", cex = text_size, pos = 4)
   dev.off()
 }
 
