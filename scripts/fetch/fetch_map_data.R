@@ -24,7 +24,7 @@ fetch.fetch_map_data <- function(viz = as.viz("fetch_map_data")) {
     
     urls <- c(jl$catchmentRealization, jl$outflow)
     
-    out_data <- lapply(urls, parse_elfie_json)
+    out_data <- lapply(paste0(urls, ".json"), parse_elfie_json)
     
     if(length(out_data) != 3) stop("Expected three features.")
     
@@ -37,8 +37,13 @@ fetch.fetch_map_data <- function(viz = as.viz("fetch_map_data")) {
   }
   
   for(i in 1:3) {
-    map_data[[i]] <- sf::st_sf(geometry = sf::st_sfc(map_data[[i]]), data.frame(huc12 = HU_ids, row.names = HU_ids, stringsAsFactors = F))
+    map_data[[i]] <- sf::st_sf(geometry = sf::st_sfc(map_data[[i]]), 
+                               data.frame(huc12 = HU_ids, 
+                                          row.names = HU_ids, 
+                                          stringsAsFactors = F))
+    
     sf::st_crs(map_data[[i]]) <- sf::st_crs("+init=epsg:4326")
+    
     map_data[[i]]$name <- hu_names
   }
   
@@ -55,16 +60,16 @@ parse_elfie_json <- function(url) {
     if(jl$geo$`@type` == "schema:GeoCoordinates") {
       sfg <- sf::st_point(c(jl$geo$longitude, jl$geo$latitude))
     } else if(jl$geo$`@type` == "schema:GeoShape") {
-      if(!is.null(jl$geo$polygon)) {
-        if(!is.list(jl$geo$polygon$geometry$coordinates) && dim(jl$geo$polygon$geometry$coordinates)[1]==1 && dim(jl$geo$polygon$geometry$coordinates)[2]==1) {
-          sfg <- sf::st_polygon(list(matrix(jl$geo$polygon$geometry$coordinates[1,1,,], ncol = 2, byrow = F)))
-        } else if(is.list(jl$geo$polygon$geometry$coordinates)) {
-          sfg <- sf::st_multipolygon(lapply(jl$geo$polygon$geometry$coordinates[[1]], function(x) sf::st_polygon(list(x))))
+      if(!is.null(jl$geo$`schema:polygon`)) {
+        if(!is.list(jl$geo$`schema:polygon`$geometry$coordinates) && dim(jl$geo$`schema:polygon`$geometry$coordinates)[1]==1 && dim(jl$geo$`schema:polygon`$geometry$coordinates)[2]==1) {
+          sfg <- sf::st_polygon(list(matrix(jl$geo$`schema:polygon`$geometry$coordinates[1,1,,], ncol = 2, byrow = F)))
+        } else if(is.list(jl$geo$`schema:polygon`$geometry$coordinates)) {
+          sfg <- sf::st_multipolygon(lapply(jl$geo$`schema:polygon`$geometry$coordinates[[1]], function(x) sf::st_polygon(list(x))))
         } else {
           stop("found a multipolygon or multiple features, not supported")
         }
-      } else if(!is.null(jl$geo$li)) {
-        sfg <- sf::st_multilinestring(lapply(jl$geo$line$geometry$coordinates[[1]], sf::st_linestring))
+      } else if(!is.null(jl$geo$`schema:line`)) {
+        sfg <- sf::st_multilinestring(lapply(jl$geo$`schema:line`$geometry$coordinates[[1]], sf::st_linestring))
       }
     }
   }
