@@ -16,27 +16,22 @@ fetch.fetch_map_data <- function(viz = as.viz("fetch_map_data")) {
                    "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydroNexus" = md)
   
   for(ws in HU_ids) {
-    # ws <- HU_ids[1]
     url <- paste0(base_url, ws, ".json")
     
     content <- rawToChar(httr::GET(url)$content)
-    jl <- jsonlite::fromJSON(content)
+    jl <- jsonlite::fromJSON(content, simplifyVector = F)
     
     urls <- c(jl$catchmentRealization, jl$outflow)
     
-    out_data <- lapply(paste0(urls, ".json"), parse_elfie_json)
-    
-    if(length(out_data) != 3) stop("Expected three features.")
-    
-    for(i in 1:3) {
-      map_data[[names(out_data[[i]])]][[ws]] <- out_data[[i]][[1]]
+    for(f in 1:length(urls)) {
+       map_data[[urls[[f]]$`@type`]][[ws]] <- parse_elfie_json(paste0(urls[[f]]$`@id`, ".json"))[[1]]
     }
     
     hu_names[[ws]] <- jl$name
     
   }
   
-  for(i in 1:3) {
+  for(i in 1:length(map_data)) {
     map_data[[i]] <- sf::st_sf(geometry = sf::st_sfc(map_data[[i]]), 
                                data.frame(huc12 = HU_ids, 
                                           row.names = HU_ids, 
