@@ -32,10 +32,10 @@ explanationText1: |
   storage, (2) uncertainty in data, and (3) unquantified sources and sinks.
 
   The water balance shown here neglects one of the most difficult terms to
-  quantify -- storage. The amount of water stored in a particular watershed,
-  whether in lakes, aquifers, or any other storage, fluctuates over time; at
-  times contributing extra water to outflows (shrinking stores) and at other
-  times withholding water from outflows (increasing stores). Using the bank
+  quantify -- storage. The amount of water stored in a particular watershed, 
+  whether in lakes, aquifers, or any other storage, fluctuates over time; at times 
+  storage shrinks due to larger outflows and/or smaller inflows, and at other times 
+  storage increases due to smaller outflows and/or larger inflows. Using the bank
   analogy, storage is the amount of money in a bank account. For a given period
   of time, the inflows and outflows may not be equivalent and the balance may
   shift. While this can be less important for long-term balances as is shown
