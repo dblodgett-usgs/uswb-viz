@@ -106,7 +106,7 @@ process_wb_ts <- function(wb_data) {
   an_q$data <- an_q$data*(60 * 60 * 24 * 365.25) * 12/da_sqft
   an_q$group <- "Q"
   
-  rbind(an_e, an_p, an_q)
+  dplyr::filter(rbind(an_e, an_p, an_q), as.numeric(year) > 1999 & as.numeric(year) < 2016)
 }
 
 process.process_watershed_por_wb_data <- function(viz = as.viz("process_watershed_por_wb_data")) {
