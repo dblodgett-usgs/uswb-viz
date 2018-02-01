@@ -7,7 +7,7 @@
 
 <!-- Main rectangles -->
 <rect x='{{p_rect_x}}' y='{{p_rect_y}}' width='{{rect_w}}' height='{{p_rect_h}}' class='precip-bar'/>
-<rect x='{{u_rect_x}}' y='{{u_rect_y}}' width='{{rect_w}}' height='{{u_rect_h}}' class='unknown-bar'/>
+<!--<rect x='{{u_rect_x}}' y='{{u_rect_y}}' width='{{rect_w}}' height='{{u_rect_h}}' class='unknown-bar'/>-->
 <rect x='{{eq_rect_x}}' y='{{q_rect_y}}' width='{{rect_w}}' height='{{q_rect_h}}' class='streamflow-bar'/>
 <rect x='{{eq_rect_x}}' y='{{e_rect_y}}' width='{{rect_w}}' height='{{e_rect_h}}' class='evapotranspiration-bar'/>
 
@@ -30,7 +30,7 @@
 <rect x='{{legend_boxes_x}}' y='{{legend_p_y}}' width='{{legend_box_size}}' height='{{legend_box_size}}' class='precip-bar' />
 <rect x='{{legend_boxes_x}}' y='{{legend_e_y}}' width='{{legend_box_size}}' height='{{legend_box_size}}' class='evapotranspiration-bar' />
 <rect x='{{legend_boxes_x}}' y='{{legend_q_y}}' width='{{legend_box_size}}' height='{{legend_box_size}}' class='streamflow-bar' />
-<rect x='{{legend_boxes_x}}' y='{{legend_u_y}}' width='{{legend_box_size}}' height='{{legend_box_size}}' class='unknown-bar' />
+<!--><rect x='{{legend_boxes_x}}' y='{{legend_u_y}}' width='{{legend_box_size}}' height='{{legend_box_size}}' class='unknown-bar' />-->
 
 <!-- legend text -->
 <g><text x='{{legend_title_x}}' y='{{legend_title_y}}' class='legend-text' lengthAdjust='spacingAndGlyphs'>Mean Annual 2000-2015</text></g>
@@ -42,6 +42,11 @@
 <g><text x='{{legend_text_x}}' y='{{legend_textn_e_y}}' class='legend-text' lengthAdjust='spacingAndGlyphs'>{{legend_e_val}} in/yr</text></g>
 <g><text x='{{legend_text_x}}' y='{{legend_textn_q_y}}' class='legend-text' lengthAdjust='spacingAndGlyphs'>{{legend_q_val}} in/yr</text></g>
 <g><text x='{{legend_text_x}}' y='{{legend_textn_u_y}}' class='legend-text' lengthAdjust='spacingAndGlyphs'>{{legend_u_val}} in/yr</text></g>
+<g><text x='{{caption_text_x}}' y='{{caption_text_y}}' class='legend-text' lengthAdjust='spacingAndGlyphs'>
+  <tspan>Major water budget components. Unknown is the</tspan>
+  <tspan x='{{caption_text_x}}' dy='1.2em'>difference between in and out and is described</tspan> 
+  <tspan x='{{caption_text_x}}' dy='1.2em'>in more detail below.</tspan> 
+</text></g>
 </g>
 {{/barcharts}}
 </svg>

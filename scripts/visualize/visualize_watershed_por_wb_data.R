@@ -24,6 +24,8 @@ visualize.visualize_watershed_por_wb_data <- function(viz = as.viz("visualize_wa
                  titles = titles,
                  scale_max = 70)
   
+  wb_svg_size[4] <- 320
+  
   template_list <- list(viewbox = paste(wb_svg_size, collapse = " "),
                         top_id = "visualize_watershed_por_wb_data",
                         title = viz[["title"]], 
@@ -144,6 +146,8 @@ build_watershed_por_wb_svg_list <- function(wb, all_wb_data, view_box, titles, s
   legend_title_x <- legend_boxes_x
   legend_title_y <- legend_p_y - legend_text_spacing
   
+  caption_text_y <- out_y + y_tick_allow/2
+  
   template_list <-list(hu_id = paste0("wb-id-", wb), starting_class = "nill",
        title_x = title_x, title_y = title_y, title = titles[[wb]],
        rect_w = rect_w,
@@ -169,7 +173,8 @@ build_watershed_por_wb_svg_list <- function(wb, all_wb_data, view_box, titles, s
        legend_textn_q_y = legend_textn_q_y, legend_textn_u_y = legend_textn_u_y,
        legend_p_val = round(pr, digits = 1), legend_e_val = round(et, digits = 1), 
        legend_q_val = round(q, digits = 1), legend_u_val = round(u, digits = 1),
-       legend_title_x = legend_title_x, legend_title_y = legend_title_y)
+       legend_title_x = legend_title_x, legend_title_y = legend_title_y,
+       caption_text_x = y_units_x, caption_text_y = caption_text_y)
   
   template_list
 }
