@@ -12,57 +12,58 @@ explanationText1: |
   
   Water budgets are used to understand the movement of water into and out of a
   watershed. Much like a financial budget, inflows, storage, and outflows can
-  be thought of like income, account balance, and expenses respectively. Unlike
-  a bank account, we don't have perfect information about the flows of water
-  into and out of a watershed.
+  be thought of like income, account balance, and expenses respectively.
+  Unlike a bank account, we don't have perfect information about the flows of
+  water into and out of a watershed.  
 
   In this data visualization, you can see how three major components of the
   water budget vary across the conterminous US. Precipitation is incoming rain
-  and snow; evapotranspiration is outgoing evaporation from soil and
-  water bodies and transpiration through plants; and runoff is excess water that
-  makes its way to lakes and rivers through streams and spring discharges. Each 
-  of these components is estimated with a variety of measurement and modeling methods.
+  and snow; evapotranspiration is outgoing evaporation from soil and water
+  bodies and transpiration through plants; and runoff is excess water that
+  makes its way to lakes and rivers through streams and spring discharges.
+  Each of these components is estimated with a variety of measurement and
+  modeling methods.  
 
   With perfect information, the water budget bar charts shown here would
   “balance”, showing that in the long run, inflows to each watershed are equal
-  to outflows, barring any changes in storage. The imbalance in the
-  bar charts is meant to highlight the fact that our best estimate of three
-  major water budget components don't balance perfectly. So why might these
-  data not balance? We know the imbalance can be the result of (1) changes in
-  storage, (2) uncertainty in data, and (3) unquantified sources and sinks.
+  to outflows plus changes in storage. The imbalance in the bar charts
+  highlights that our best estimates of the three major water budget
+  components don't balance perfectly. Why might the budget not balance? We
+  know the imbalance can be the result of (1) changes in storage, (2)
+  unquantified sources and sinks, and (3) uncertainty in data. Although the
+  imbalance is the difference between in and out, the true and complete (but
+  unknown) budget could have additional terms on both sides (explanations 1 or
+  2) and could have larger or smaller values for any of the existing terms
+  (explanation 3).  
 
-  The water balance shown here neglects one of the most difficult terms to
-  quantify -- storage. The amount of water stored in a particular watershed, 
-  whether in lakes, aquifers, or any other storage, fluctuates over time; at times 
-  storage shrinks due to larger outflows and/or smaller inflows, and at other times 
-  storage increases due to smaller outflows and/or larger inflows. Using the bank
-  analogy, storage is the amount of money in a bank account. For a given period
-  of time, the inflows and outflows may not be equivalent and the balance may
-  shift. While this can be less important for long-term balances as is shown
-  here, it becomes more important at monthly or daily time scales, making it a
-  very important aspect of the water budget. The National Water Census (NWC) is
-  exploring remotely sensed products and additional observational datasets such
-  as groundwater well data to improve our characterization of storage.
+  The water budget shown here is missing one of the most difficult terms to
+  quantify – change in storage. The amount of water stored in a particular
+  watershed, whether in lakes, aquifers, or any other storage, fluctuates over
+  time; at times storage shrinks due to larger outflows and/or smaller
+  inflows, and at other times storage increases due to smaller outflows and/or
+  larger inflows. Using the bank analogy, storage is the amount of money in a
+  bank account. For a given period of time, the inflows and outflows may not
+  be equivalent and the balance may shift. While this can be less important
+  for long-term balances as is shown here, it becomes more important at
+  monthly or daily time scales, making it a very important aspect of the water
+  budget. The National Water Census (NWC) is exploring remotely sensed
+  products and additional observational datasets such as groundwater well data
+  to improve our characterization of storage.  
 
-  Layered into all of these hydrologic observations is an unknown or
-  unquantified degree of uncertainty - no measurement is exact. The NWC is
-  collecting and analyzing numerous observational and simulated data sets to
-  begin to understand the degree of uncertainty in the water budget. Work can
-  also be undertaken to understand and reduce specific sources of uncertainty
-  and to incorporate information on uncertainty into our characterization of
-  the water budget. The final source of the “unknown” in the water budget stems
-  from the fact that current hydrologic data products may not have captured all
-  of the components of the water budget, resulting in unquantified components
-  of the water budget. These could be natural processes that we know we have not
-  accounted for (such as groundwater flow out of a watershed) or human water
-  use. The NWC continues to apply cutting-edge science to expanding our ability
-  to account for the complete water budget.
+  The “imbalance” in the water budgets also stems from unquantified
+  components. These could include human water use or natural processes such as
+  groundwater flow out of a watershed. The NWC continues to apply cutting-edge
+  science to expanding our ability to account for the complete water budget.No
+  measurement is exact. Each of the water budget components shown here has
+  some unknown uncertainty included in it. The NWC is analyzing observational
+  and simulated data sets to to understand these uncertainties.  
 
   As we go forward, the NWC aims to improve our understanding of the unknowns
   in the water budget for every watershed in the country. In addition to
   improving our observational datasets and our understanding of their
-  uncertainties, the National Water Census is developing a model to estimate
-  components of the water budget. Building upon knowledge gained through
-  comprehensive analysis of observational datasets, this model can be used to
-  understand how the different water budget components relate to one another
-  and may change under various land use and water management scenarios.
+  uncertainties, the NWC is developing a model to combine these datasets to
+  estimate a complete and closed water budget. Building upon knowledge gained
+  through comprehensive analysis of observational datasets, this model can be
+  used to understand how the different water budget components relate to one
+  another and may change under various land use and water management scenarios.  
+
