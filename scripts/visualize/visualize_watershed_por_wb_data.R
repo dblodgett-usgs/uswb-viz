@@ -130,7 +130,7 @@ build_watershed_por_wb_svg_list <- function(wb, all_wb_data, view_box, titles, s
   legend_p_y <- max_bar_y + (max_bar_h / 2) - (legend_box_size * 3)
   legend_e_y <- legend_p_y + (legend_box_size * 2)
   legend_q_y <- legend_p_y + (legend_box_size * 4)
-  legend_u_y <- legend_p_y + (legend_box_size * 6)
+  legend_u_y <- legend_p_y + (legend_box_size * 7)
   
   legend_text_p_y <- legend_p_y + (legend_box_size / 2)
   legend_text_e_y <- legend_e_y + (legend_box_size / 2)

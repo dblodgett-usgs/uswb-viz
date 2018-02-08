@@ -4,8 +4,8 @@ info:
   name: US Water Budgets
   date: 2018-01-20
   publish-date: 2018-01-20
-  path: /uswb-viz
-  analytics-id: TBD
+  path: /waterbudget-viz
+  analytics-id: UA-50928997-1
   description: >-
     !!! PRELIMINARY AND SUBJECT TO REVISISON !!!
     U.S. Water Budgets -- In this data visualization,
