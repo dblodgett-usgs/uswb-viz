@@ -7,27 +7,26 @@ info:
   path: /waterbudget-viz
   analytics-id: UA-50928997-1
   description: >-
-    !!! PRELIMINARY AND SUBJECT TO REVISISON !!!
     U.S. Water Budgets -- In this data visualization,
     you can see how three major components of the water
     budget vary across the conterminous US.
   audience: General public
   keywords: [ "water", "USGS", "VIZLAB", "water budget" ]
-  url: https://dblodgett-usgs.github.io/uswb-viz/
+  url: https://cida.usgs.gov/nwc-static/waterbudget-viz/
   thumbnail-facebook:
-    url: "https://dblodgett-usgs.github.io/uswb-viz/images/thumb-facebook.png"
+    url: "https://cida.usgs.gov/nwc-static/waterbudget-viz/images/thumb-facebook.png"
     width: 400
     height: 400
     alttext: "How the water cycle varies across the United States"
     type: image/png
   thumbnail-twitter:
-    url: "https://dblodgett-usgs.github.io/uswb-viz/images/thumb-twitter.png"
+    url: "https://cida.usgs.gov/nwc-static/waterbudget-viz/images/thumb-twitter.png"
     width: 400
     height: 400
     alttext: "How the water cycle varies across the United States"
     type: image/png
   thumbnail-landing: 
-    url: "https://dblodgett-usgs.github.io/uswb-viz/images/thumb-landing.png"
+    url: "https://cida.usgs.gov/nwc-static/waterbudget-viz/images/thumb-landing.png"
     width: 400
     height: 400
     alttext: "How the water cycle varies across the United States"
