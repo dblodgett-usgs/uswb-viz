@@ -309,7 +309,7 @@ publish:
       header: header
       sections: ["handmade-social-section", "map-section"]
       resources: [ "lib-d3-js", "jquery-js", "vizlab-js", "svg-injector-js", 
-      "animate-js", "tooltip-js", "header-css", "viz-css", "svg-css", "footer-css", "socialCSS"]
+      "tooltip-js", "header-css", "viz-css", "svg-css", "footer-css", "socialCSS", "animate-js"]
   -
     id: publish_map_section
     publisher: section
@@ -406,4 +406,7 @@ publish:
     vizzies:
       - name: Visualizing water use by region and time
         org: USGS-VIZLAB
-        repo: water-use
+        repo: water-use 
+      - name: Water use in the  U.S. by county, 2015
+        org: USGS-VIZLAB
+        repo: water-use-15 
